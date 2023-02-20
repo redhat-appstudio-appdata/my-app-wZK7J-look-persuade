@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: src-microservices-demo-oox3
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: src-microservices-demo-oox3
+    app.kubernetes.io/part-of: my-app
+  name: src-microservices-demo-oox3
+  namespace: rhn-engineering-jlabocki-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: src-microservices-demo-oox3
+    weight: null
+status: {}

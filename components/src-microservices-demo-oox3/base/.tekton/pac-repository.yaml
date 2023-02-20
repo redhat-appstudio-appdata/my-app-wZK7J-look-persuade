@@ -1,0 +1,15 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  annotations:
+    appstudio.openshift.io/application: my-app
+    appstudio.openshift.io/component: src-microservices-demo-oox3
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: src-microservices-demo-oox3
+  namespace: rhn-engineering-jlabocki-tenant
+spec:
+  url: https://github.com/GoogleCloudPlatform/microservices-demo
